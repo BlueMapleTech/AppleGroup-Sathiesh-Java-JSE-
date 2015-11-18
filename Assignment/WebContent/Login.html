@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["username"].value;
+    var x1 = document.forms["myForm"]["password"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    if (x1 == null || x1 == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+  }
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+<form name="myForm"onsubmit="return validateForm()" action="Admin"method="post">
+UserName:  <input type="text"name="username"/><br/><br/>
+PassWord:  <input type="password"name="password"/><br/><br/>
+<input type="submit"value="Login"/>
+<a href="SignUp.jsp">Create an Account</a>
+</form>
+</body>
+</html>
